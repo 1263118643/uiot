@@ -8,6 +8,12 @@ class UiotSendNorthApplicationTests {
 
     @Test
     void contextLoads() {
+
+
     }
 
+    @Test
+    public void test(){
+        System.out.println("OK");
+    }
 }
