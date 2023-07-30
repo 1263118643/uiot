@@ -1,12 +1,5 @@
-#spring:
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: 127.0.0.1:8000
-#  application:
-#    name: uiot-recive-msg
 server:
-  port: 8080
+  port: 9001
 spring:
   application:
     name: uiot-receive-msg
@@ -14,11 +7,13 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-  sleuth:
-    enabled: true # 开启sleuth，默认true
-    trace-id128: false # 生成128位id，默认false生成64位
-    sampler:
-      probability: 1.0 # 采样率，此处设置为100%采样，优先于限流
-      rate: 10 # 限流，每秒钟次数，默认10
+#  sleuth:
+#    enabled: true # 开启sleuth，默认true
+#    trace-id128: false # 生成128位id，默认false生成64位
+#    sampler:
+#      probability: 1.0 # 采样率，此处设置为100%采样，优先于限流
+#      rate: 10 # 限流，每秒钟次数，默认10
+
+
 
 

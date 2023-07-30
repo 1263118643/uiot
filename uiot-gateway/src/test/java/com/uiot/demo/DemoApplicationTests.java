@@ -1,19 +1,13 @@
-package com.uiot.uiotsendnorth;
+package com.uiot.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UiotSendNorthApplicationTests {
+class DemoApplicationTests {
 
     @Test
     void contextLoads() {
-
-
     }
 
-    @Test
-    public void test() {
-        System.out.println("OK");
-    }
 }

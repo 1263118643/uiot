@@ -1,0 +1,19 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: gateway
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  cloud:
+    gateway:
+#      routes:
+#        - id: uiot-receive-msg
+#          uri: lb://uiot-receive-msg
+#          order: 8000
+#          predicates:
+#            - Path=/api/receive/**
+      discovery:
+        locator:
+          enabled: true

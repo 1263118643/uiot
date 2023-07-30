@@ -25,6 +25,7 @@
        <module>uiot-receive-msg</module>
        <module>uiot-send-north</module>
        <module>uiot-sendmsg</module>
+       <module>uiot-gateway</module>
    </modules>
     <packaging>pom</packaging>
     <groupId>com.uiot</groupId>
@@ -84,11 +85,11 @@
         </dependency>
 
         <!--swagger3-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.springfox</groupId>-->
+<!--            <artifactId>springfox-boot-starter</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
