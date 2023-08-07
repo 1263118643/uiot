@@ -6,14 +6,32 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   cloud:
+    nacos:
+      config:
+        import-check:
+          enabled: false
     gateway:
-#      routes:
-#        - id: uiot-receive-msg
-#          uri: lb://uiot-receive-msg
-#          order: 8000
-#          predicates:
-#            - Path=/api/receive/**
       discovery:
         locator:
+          # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
           enabled: true
+      routes:
+        - id: uiot-receive-msg
+          # 动态路由方式需要配合eureka、nacos注册中心使用
+          uri: lb://uiot-receive-msg
+          predicates:
+            - Path= /receive/**
+          filters:
+            - StripPrefix=1
+        - id: uiot-fegin-ctwing
+            # 动态路由方式需要配合eureka、nacos注册中心使用
+          uri: lb://uiot-fegin-ctwing
+          predicates:
+            - Path= /ctwing/**
+          filters:
+            - StripPrefix=1
+

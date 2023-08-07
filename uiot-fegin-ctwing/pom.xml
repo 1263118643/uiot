@@ -7,11 +7,9 @@
         <artifactId>uiot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.uiot</groupId>
-    <artifactId>uiot-common</artifactId>
+    <artifactId>uiot-fegin-ctwing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>uiot-common</name>
-    <description>Demo project for Spring Boot</description>
+    <name>uiot-fegin-ctwing</name>
 <!--    <properties>-->
 <!--        <java.version>8</java.version>-->
 <!--    </properties>-->
@@ -20,11 +18,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--feign客户端依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,14 +39,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>

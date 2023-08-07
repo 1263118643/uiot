@@ -1,10 +1,10 @@
-package com.uiot.uiotreceivemsg;
+package com.uiot.uiotfeginctwing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UiotReceiveMsgApplicationTests {
+class UiotFeginCtwingApplicationTests {
 
     @Test
     void contextLoads() {
