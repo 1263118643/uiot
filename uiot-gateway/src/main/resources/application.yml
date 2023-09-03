@@ -28,7 +28,7 @@ spring:
           filters:
             - StripPrefix=1
         - id: uiot-fegin-ctwing
-            # 动态路由方式需要配合eureka、nacos注册中心使用
+          # 动态路由方式需要配合eureka、nacos注册中心使用
           uri: lb://uiot-fegin-ctwing
           predicates:
             - Path= /ctwing/**

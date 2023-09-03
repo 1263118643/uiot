@@ -12,6 +12,7 @@ public class CorsConfig {
 
     /**
      * 添加跨域过滤器
+     *
      * @return CorsWebFilter
      */
     @Bean
